@@ -9,17 +9,33 @@
         android:id="@+id/mainfragment"
         android:name="com.example.sympathytest.fragment.Mainfragment"
         android:label="fragment_mainfragment"
-        tools:layout="@layout/fragment_mainfragment" >
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainfragment_to_resultFragment2"
-            app:destination="@id/resultFragment2" />
-        <action
-            android:id="@+id/action_mainfragment_to_resultFragment22"
-            app:destination="@id/resultFragment2" />
+            android:id="@+id/action_mainfragment_to_questionFragment3"
+            app:destination="@id/questionFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment2"
         android:name="com.example.sympathytest.fragment.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+    </fragment>
+    <fragment
+        android:id="@+id/selectionFragment"
+        android:name="com.example.sympathytest.fragment.SelectionFragment"
+        android:label="fragment_selection"
+        tools:layout="@layout/fragment_selection" >
+        <action
+            android:id="@+id/action_selectionFragment_to_resultFragment2"
+            app:destination="@id/resultFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.sympathytest.fragment.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_selectionFragment"
+            app:destination="@id/selectionFragment" />
+    </fragment>
 </navigation>
